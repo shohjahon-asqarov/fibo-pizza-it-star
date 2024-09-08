@@ -1,4 +1,3 @@
-import React from 'react'
 import { stock_data } from '../assets/stock/stock'
 
 const StockPage = () => {

@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
 import { logo, starIcon, yandexEdaIcon } from '../assets/data'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
+import { useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
 
 const Navbar = () => {
 
@@ -35,11 +36,21 @@ const Navbar = () => {
         }
     ];
 
+    const { pathname } = useLocation()
+
+    useEffect(() => {
+        setOpen(false)
+    } , [pathname])
+
     const [open, setOpen] = useState(false);
 
     const toggleMenu = () => {
         setOpen(!open);
     }
+
+
+    const cardLength = useSelector((store) => store.card.data.length)
+
 
     return (
         <header className={open ? 'bg-yellow' : 'bg-white'}>
@@ -83,7 +94,7 @@ const Navbar = () => {
                         </button>
 
                         <button className='light-btn hidden lg:block'>Заказать звонок</button>
-                        <button className='btn-yellow hidden md:block lg:hidden'>Корзина | 1</button>
+                        <Link to={`/card`} className='btn-yellow hidden md:block lg:hidden'>Корзина | {cardLength}</Link>
 
                         <a className='text-26 font-bold text-yellow hidden md:block' href="tel:+998939170731">998 93-917-07-31</a>
                     </div>
@@ -106,7 +117,7 @@ const Navbar = () => {
 
                     <div className='flex items-center space-x-3'>
                         <button className='btn-transparent'>Войти</button>
-                        <button className='btn-yellow'>Корзина | 1</button>
+                        <Link to={`/card`} className='btn-yellow'>Корзина | {cardLength}</Link>
                     </div>
                 </div>
 
@@ -116,7 +127,7 @@ const Navbar = () => {
                             {nav_links.map((i, index) => {
                                 return (
                                     <li key={index}>
-                                        <NavLink className='font-semibold' to={`/ ${i.link}`}>{i.title}</NavLink>
+                                        <NavLink className='font-semibold' to={`/${i.link}`}>{i.title}</NavLink>
                                     </li>
                                 )
                             })}

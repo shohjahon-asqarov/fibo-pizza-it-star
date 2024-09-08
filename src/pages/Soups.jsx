@@ -1,6 +1,9 @@
+import { useDispatch } from 'react-redux';
 import { soups } from '../assets/supi/soups'
+import { addCard } from '../store/slices/cardSlice'
 
 const Soups = () => {
+    const dispatch = useDispatch();
     return (
         <section>
             <div className="container">
@@ -17,7 +20,10 @@ const Soups = () => {
 
                                     <div className='flex justify-between items-center'>
                                         <p className='text-22 font-bold'>от {pizza.price} ₽</p>
-                                        <button className='btn-yellow !py-1.5 !text-white duration-300 text-sm group-hover:!text-gray   '>В корзину</button>
+                                        <button
+                                            onClick={() => dispatch(addCard(pizza))}
+
+                                            className='btn-yellow !py-1.5 !text-white duration-300 text-sm group-hover:!text-gray   '>В корзину</button>
                                     </div>
                                 </div>
                             </li>

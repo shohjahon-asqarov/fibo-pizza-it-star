@@ -28,8 +28,11 @@ import msIcon from './icon/messenjer.svg';
 import spIcon from './icon/scipe.svg';
 import wsIcon from './icon/whatsap.svg';
 
+import plusIcon from './icon/plus.svg';
+import minusIcon from './icon/minus.svg';
+import closeIcon from './icon/close.svg';
 
-
+import emptyIcon from './gift/empty.gif';
 
 const pizza_data = [
     {
@@ -118,5 +121,9 @@ export {
     vkIcon,
     msIcon,
     spIcon,
-    wsIcon
+    wsIcon,
+    plusIcon,
+    minusIcon,
+    closeIcon,
+    emptyIcon
 }

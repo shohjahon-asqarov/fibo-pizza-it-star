@@ -1,7 +1,10 @@
-import React from 'react'
 import { drinks } from '../assets/drinks/drinks'
+import { addCard } from '../store/slices/cardSlice'
+import { useDispatch } from 'react-redux';
 
 const Drink = () => {
+
+    const dispatch = useDispatch();
     return (
         <section>
             <div className="container">
@@ -18,7 +21,9 @@ const Drink = () => {
 
                                     <div className='flex justify-between items-center'>
                                         <p className='text-22 font-bold'>от {pizza.price} ₽</p>
-                                        <button className='btn-yellow !py-1.5 !text-white duration-300 text-sm group-hover:!text-gray   '>В корзину</button>
+                                        <button
+                                            onClick={() => dispatch(addCard(pizza))}
+                                            className='btn-yellow !py-1.5 !text-white duration-300 text-sm group-hover:!text-gray   '>В корзину</button>
                                     </div>
                                 </div>
                             </li>

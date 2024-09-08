@@ -11,6 +11,7 @@ import Footer from './components/Footer'
 import Loader from './components/Loader'
 
 // pages
+import Card from './pages/Card'
 const Pizza = React.lazy(() => import('./pages/Pizza'))
 const Drink = React.lazy(() => import('./pages/Drink'));
 const Paste = React.lazy(() => import('./pages/Paste'));
@@ -18,6 +19,11 @@ const Salads = React.lazy(() => import('./pages/Salads'));
 const Soups = React.lazy(() => import('./pages/Soups'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const StockPage = React.lazy(() => import('./pages/StockPage'));
+
+
+
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
 
@@ -48,12 +54,14 @@ const App = () => {
             <Route path='/salad' element={<Salads />} />
             <Route path='/soups' element={<Soups />} />
             <Route path='/contact' element={<Contact />} />
+            <Route path='/card' element={<Card />} />
           </Routes>
         </Suspense>
       </main>
 
 
       <Footer />
+      <ToastContainer />
     </>
   )
 }

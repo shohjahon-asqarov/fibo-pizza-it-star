@@ -1,4 +1,3 @@
-import React from 'react'
 import { news_img } from '../assets/data'
 
 const News = () => {

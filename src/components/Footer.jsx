@@ -1,4 +1,3 @@
-import React from 'react'
 import { fbIcon, logo, masterIcon, msIcon, paypalIcon, spIcon, tgIcon, visaIcon, vkIcon, wsIcon } from '../assets/data'
 
 const Footer = () => {
