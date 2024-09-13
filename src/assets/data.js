@@ -32,6 +32,11 @@ import plusIcon from './icon/plus.svg';
 import minusIcon from './icon/minus.svg';
 import closeIcon from './icon/close.svg';
 
+import likeIcon from './icon/heart.svg';
+import likeFillIcon from './icon/heart-fill.svg';
+
+import arrowLeftIcon from './icon/arrow-left-circle-fill.svg'
+
 import emptyIcon from './gift/empty.gif';
 
 const pizza_data = [
@@ -40,64 +45,72 @@ const pizza_data = [
         img: pizza_img,
         title: 'С креветками и трюфелями',
         description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан.350 г',
-        price: 600,
-        count: 1
+        price: 350,
+        count: 1,
+        category: 'Пицца'
     },
     {
         id: 2,
         img: pizza_img,
         title: 'С креветками и трюфелями',
         description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан.350 г',
-        price: 600,
-        count: 1
+        price: 350,
+        count: 1,
+        category: 'Пицца'
     },
     {
         id: 3,
         img: pizza_img,
         title: 'С креветками и трюфелями',
         description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан.350 г',
-        price: 600,
-        count: 1
+        price: 350,
+        count: 1,
+        category: 'Пицца'
     },
     {
         id: 4,
         img: pizza_img,
         title: 'С креветками и трюфелями',
         description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан.350 г',
-        price: 600,
-        count: 1
+        price: 350,
+        count: 1,
+        category: 'Пицца'
     },
     {
         id: 5,
         img: pizza_img,
         title: 'С креветками и трюфелями',
         description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан.350 г',
-        price: 600,
-        count: 1
+        price: 350,
+        count: 1,
+        category: 'Пицца'
     },
     {
         id: 6,
         img: pizza_img,
         title: 'С креветками и трюфелями',
         description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан.350 г',
-        price: 600,
-        count: 1
+        price: 350,
+        count: 1,
+        category: 'Пицца'
     },
     {
         id: 7,
         img: pizza_img,
         title: 'С креветками и трюфелями',
         description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан.350 г',
-        price: 600,
-        count: 1
+        price: 350,
+        count: 1,
+        category: 'Пицца'
     },
     {
         id: 8,
         img: pizza_img,
         title: 'С креветками и трюфелями',
         description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан.350 г',
-        price: 600,
-        count: 1
+        price: 350,
+        count: 1,
+        category: 'Пицца'
     }
 ]
 
@@ -125,5 +138,8 @@ export {
     plusIcon,
     minusIcon,
     closeIcon,
-    emptyIcon
+    emptyIcon,
+    likeIcon,
+    likeFillIcon,
+    arrowLeftIcon
 }

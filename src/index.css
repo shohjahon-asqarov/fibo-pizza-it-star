@@ -3,7 +3,18 @@
 
 html {
   font-family: "Montserrat", sans-serif !important;
+  scroll-behavior: smooth;
   @apply text-black;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+  background-color: lightgrey;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-yellow;
 }
 
 @tailwind base;
@@ -48,6 +59,11 @@ h3 {
 
 .grid-4-list {
   @apply grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 pt-10 pb-20;
+}
+
+/* phone auth */
+input {
+  @apply py-1 px-5 border border-gray rounded-14;
 }
 
 /* for loader */
@@ -163,5 +179,3 @@ h3 {
     transform: rotate(360deg);
   }
 }
-
-

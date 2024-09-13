@@ -1,8 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { toast } from 'react-toastify';
 
+const getInitialState = () => {
+    const savedData = localStorage.getItem('cardData');
+    return savedData ? JSON.parse(savedData) : [];
+}
+
 const initialState = {
-    data: [],
+    data: getInitialState(),
 }
 
 export const cardSlice = createSlice({
@@ -35,6 +40,8 @@ export const cardSlice = createSlice({
                     theme: "light",
                 });
             }
+            localStorage.setItem('cardData', JSON.stringify(state.data));
+
         },
         deleteCard: (state, action) => {
             state.data = state.data.filter(item => item.id !== action.payload.id);
@@ -48,6 +55,8 @@ export const cardSlice = createSlice({
                 progress: undefined,
                 theme: "light",
             });
+            localStorage.setItem('cardData', JSON.stringify(state.data));
+
         },
         updateCount: (state, action) => {
             state.data.forEach(i => {
@@ -55,6 +64,8 @@ export const cardSlice = createSlice({
                     i.count++
                 }
             })
+            localStorage.setItem('cardData', JSON.stringify(state.data));
+
         },
         minusCount: (state, action) => {
             state.data.forEach(i => {
@@ -76,6 +87,8 @@ export const cardSlice = createSlice({
                     }
                 }
             })
+            localStorage.setItem('cardData', JSON.stringify(state.data));
+
         }
     },
 })

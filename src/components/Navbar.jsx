@@ -1,4 +1,4 @@
-import { logo, starIcon, yandexEdaIcon } from '../assets/data'
+import { likeIcon, logo, starIcon, yandexEdaIcon } from '../assets/data'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
@@ -40,7 +40,7 @@ const Navbar = () => {
 
     useEffect(() => {
         setOpen(false)
-    } , [pathname])
+    }, [pathname])
 
     const [open, setOpen] = useState(false);
 
@@ -49,11 +49,11 @@ const Navbar = () => {
     }
 
 
-    const cardLength = useSelector((store) => store.card.data.length)
+    const cardLength = useSelector((store) => store.card.data.length);
 
 
     return (
-        <header className={open ? 'bg-yellow' : 'bg-white'}>
+        <header className={`${open ? 'bg-yellow' : 'bg-white'} sticky top-0 lg:-top-24 z-50`}>
             <div className="container py-8">
                 <div className='flex justify-between items-center'>
                     <div className='flex space-x-10 items-center'>
@@ -63,9 +63,10 @@ const Navbar = () => {
 
                         <div className='space-y-1 hidden lg:inline-block'>
                             <p className='font-semibold text-lg'>Доставка пасты <span className='text-yellow'>Москва</span></p>
-                            <p className='flex items-center space-x-2 font-bold'>
+                            <div className='flex items-center space-x-2 font-bold'>
                                 <img src={yandexEdaIcon} alt="yandex eda" />
-                                <p>Яндекс еда
+                                <p>
+                                    Яндекс еда
                                     <span className='red-dot'></span>
                                     4.8
                                 </p>
@@ -75,7 +76,7 @@ const Navbar = () => {
                                     <span className='red-dot'></span>
                                     от 31 мин
                                 </p>
-                            </p>
+                            </div>
                         </div>
 
                     </div>
@@ -116,7 +117,10 @@ const Navbar = () => {
                     </nav>
 
                     <div className='flex items-center space-x-3'>
-                        <button className='btn-transparent'>Войти</button>
+                        <Link to={`/favourite`} className='btn-transparent flex items-center border border-gray rounded-14 space-x-2'>
+                            <span>Избранное</span>
+                            <img className='translate-y-1' src={likeIcon} alt="like" />
+                        </Link>
                         <Link to={`/card`} className='btn-yellow'>Корзина | {cardLength}</Link>
                     </div>
                 </div>
@@ -135,7 +139,7 @@ const Navbar = () => {
                     </nav>
                     <button className='btn-transparent !text-black font-extrabold'>Войти</button>
                     <a className='text-lg font-bold text-black block' href="tel:+998939170731">998 93-917-07-31</a>
-                    <button className='btn-yellow !bg-white'>Корзина | 1</button>
+                    <Link to={`/card`} className='btn-yellow !bg-white inline-block'>Корзина | 1</Link>
 
                 </div>
             </div>
