@@ -8,11 +8,11 @@ import { toggleModal } from "../store/slices/modalSlice";
 const ProductCard = ({ product }) => {
     const dispatch = useDispatch();
     return (
-        <li onClick={() => dispatch(toggleModal(product))} className='p-4 relative hover:shadow-lg group cursor-pointer duration-300 border border-[#F3F3F7] rounded-14 flex flex-col' >
+        <li className='p-4 relative hover:shadow-lg group cursor-pointer duration-300 border border-[#F3F3F7] rounded-14 flex flex-col' >
             <button onClick={() => dispatch(toggleLike(product))} className='absolute top-5 right-5'>
                 <img src={checkLike(product.id) ? likeFillIcon : likeIcon} alt="like" />
             </button>
-            <img className='w-64 mx-auto' src={product.img} alt={product.title} />
+            <img onClick={() => dispatch(toggleModal(product))} className='w-64 mx-auto' src={product.img} alt={product.title} />
             <div className='space-y-3 flex-grow'>
                 <h3 >{product.title}</h3>
                 <p className='text-13 font-medium text-cart-description'>{product.description}</p>
