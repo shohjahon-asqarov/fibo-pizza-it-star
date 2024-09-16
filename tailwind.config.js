@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       maxWidth: {
-        1150: '1150px'
+        1150: '1340px'
       },
       colors: {
         'yellow': '#F7D22D',

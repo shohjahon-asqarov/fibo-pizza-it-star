@@ -28,7 +28,7 @@ const News = () => {
     return (
         <section>
             <div className="container pt-10">
-                <h2 className='text-2xl font-bold'>Новинки</h2>
+                <h2 data-aos="fade-up" className='text-2xl font-bold'>Новинки</h2>
 
                 <ul className='grid-4-list'>
                     {news_data.map((i, index) => {

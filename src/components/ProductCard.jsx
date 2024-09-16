@@ -8,7 +8,7 @@ import { toggleModal } from "../store/slices/modalSlice";
 const ProductCard = ({ product }) => {
     const dispatch = useDispatch();
     return (
-        <li className='p-4 relative hover:shadow-lg group cursor-pointer duration-300 border border-[#F3F3F7] rounded-14 flex flex-col' >
+        <li data-aos-duration="1000" data-aos="fade-up" className='p-4 relative hover:shadow-lg group cursor-pointer duration-300 border border-[#F3F3F7] rounded-14 flex flex-col' >
             <button onClick={() => dispatch(toggleLike(product))} className='absolute top-5 right-5'>
                 <img src={checkLike(product.id) ? likeFillIcon : likeIcon} alt="like" />
             </button>

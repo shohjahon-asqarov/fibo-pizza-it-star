@@ -1,23 +1,25 @@
-import { salads } from '../assets/salad/salads'
+import { useTranslation } from 'react-i18next';
+import { salads } from '../assets/salad/salads';
 import ProductCard from '../components/ProductCard';
 
 const Salads = () => {
+    const { t } = useTranslation('header');
 
     return (
         <section>
             <div className="container">
-                <h2>Салаты</h2>
+                <h2 data-aos="fade-up">{t('salads')}</h2>
 
                 <ul className='grid-4-list'>
-                    {salads.map(pizza => {
+                    {salads.map(salad => {
                         return (
-                            <ProductCard key={pizza.id} product={pizza} />
-                        )
+                            <ProductCard key={salad.id} product={salad} />
+                        );
                     })}
                 </ul>
             </div>
         </section>
-    )
+    );
 }
 
-export default Salads
+export default Salads;

@@ -33,6 +33,11 @@ import { closeModal } from './store/slices/modalSlice'
 import StockDetail from './pages/StockDetail'
 
 
+// aos scroll animation
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
 const App = () => {
   const dispatch = useDispatch();
 
@@ -42,6 +47,9 @@ const App = () => {
     window.scrollTo(0, 0)
   }, [pathname])
 
+  useEffect(() => {
+    AOS.init()
+  }, [])
 
   const modalProduct = useSelector((store) => store.modal.data)
   const isModalOpen = useSelector((store) => store.modal.isOpen)

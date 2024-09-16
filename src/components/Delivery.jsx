@@ -23,7 +23,7 @@ const Delivery = () => {
     return (
         <section className='bg-light-gray py-20'>
             <div className="container">
-                <h2 className='text-yellow text-center mb-5'>Оплата и доставка</h2>
+                <h2 data-aos="fade-up" className='text-yellow text-center mb-5'>Оплата и доставка</h2>
                 <ul className='grid-4-list !gap-y-14'>
                     {data.map((i, index) => {
                         return (

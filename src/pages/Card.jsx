@@ -1,6 +1,7 @@
 import { closeIcon, emptyIcon, minusIcon, plusIcon } from '../assets/data'
 import { useDispatch, useSelector } from 'react-redux'
 import { deleteCard, minusCount, updateCount } from '../store/slices/cardSlice';
+import { useTranslation } from 'react-i18next';
 
 const Card = () => {
 
@@ -8,11 +9,13 @@ const Card = () => {
 
     const dispatch = useDispatch()
 
+    const { t } = useTranslation('header')
+
     return (
         <section>
             <div className="container">
                 <div className='lg:w-5/6 mx-auto'>
-                    <h2>Корзина</h2>
+                    <h2 data-aos="fade-up">{t('card')}</h2>
                     {cartData.length >= 1 ?
                         <ul className='mt-10'>
                             {cartData.map(i => {

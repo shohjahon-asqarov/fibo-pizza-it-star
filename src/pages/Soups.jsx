@@ -1,22 +1,25 @@
-import { soups } from '../assets/supi/soups'
+import { useTranslation } from 'react-i18next';
+import { soups } from '../assets/supi/soups';
 import ProductCard from '../components/ProductCard';
 
 const Soups = () => {
+    const { t } = useTranslation('header');
+
     return (
         <section>
             <div className="container">
-                <h2>Супы</h2>
+                <h2 data-aos="fade-up">{t('soups')}</h2>
 
                 <ul className='grid-4-list'>
-                    {soups.map(pizza => {
+                    {soups.map(soup => {
                         return (
-                            <ProductCard key={pizza.id} product={pizza} />
-                        )
+                            <ProductCard key={soup.id} product={soup} />
+                        );
                     })}
                 </ul>
             </div>
         </section>
-    )
+    );
 }
 
-export default Soups
+export default Soups;

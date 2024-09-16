@@ -5,7 +5,7 @@ const StockPage = () => {
   return (
     <section>
       <div className="container">
-        <h2>Акции</h2>
+        <h2 data-aos="fade-up">Акции</h2>
 
         <ul className='grid grid-cols-3 gap-5 py-10'>
           {stock_data.map((i) => {

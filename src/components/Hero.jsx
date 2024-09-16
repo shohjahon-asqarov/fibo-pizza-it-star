@@ -1,11 +1,15 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from 'swiper/modules';
 
 import { nextIcon, prevIcon, slide1, slide2 } from "../assets/data";
 import { useState } from "react";
 
 import "swiper/css";
+import 'swiper/css/autoplay';
+
 
 export default function Hero() {
+
 
     const [custom_swiper, set_swiper] = useState({});
     const nextSlide = () => {
@@ -23,9 +27,13 @@ export default function Hero() {
                 <Swiper className="w-full relative cursor-pointer"
                     slidesPerView={1}
                     loop
+
                     onInit={(ev) => {
                         set_swiper(ev);
                     }}
+                    modules={[Autoplay]}
+                    autoplay={{ delay: 1500 }}
+
                     breakpoints={{
                         // when window width is >= 640px
                         640: {
