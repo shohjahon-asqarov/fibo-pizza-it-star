@@ -13,5 +13,9 @@
     "drinks": "Напитки",
     "promotions": "Акции",
     "contacts": "Контакты",
-    "favorites": "Избранное"
+    "favorites": "Избранное",
+    "new_arrivals": "Новинки",
+    "our": "Наши",
+    "all_promotions": "Все акции",
+    "payment_and_delivery": "Оплата и доставка"
 }

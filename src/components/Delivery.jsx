@@ -1,29 +1,49 @@
+import { useTranslation } from 'react-i18next';
 import { delivery_icon } from '../assets/data'
 
 const Delivery = () => {
     const data = [
         {
             img: delivery_icon,
-            title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+            title: {
+                uz: "Turli xil toifalardagi keng assortimentdagi mahsulotlarimizni o'rganing",
+                ru: "Изучите наш широкий ассортимент товаров разных категорий",
+                en: "Explore our wide selection of products across various categories"
+            }
         },
         {
             img: delivery_icon,
-            title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+            title: {
+                uz: "Buyurtmalaringizni qisqa muddat ichida xavfsiz yetkazib beramiz.",
+                ru: "Мы доставим ваши заказы в кратчайшие сроки и безопасно.",
+                en: "We deliver your orders promptly and securely."
+            }
         },
         {
             img: delivery_icon,
-            title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+            title: {
+                uz: "Barcha mahsulotlarimiz sifat tekshiruvidan o'tgan va kafolatli.",
+                ru: "Все наши товары прошли проверку качества и имеют гарантию.",
+                en: "All our products are quality-checked and guaranteed."
+            }
         },
         {
             img: delivery_icon,
-            title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+            title: {
+                uz: "Kun-u tun ishlaydigan mijozlarni qo'llab-quvvatlash xizmatimiz bilan bog'laning.",
+                ru: "Свяжитесь с нашей круглосуточной службой поддержки клиентов.",
+                en: "Contact our 24/7 customer support service."
+            }
         }
     ];
+
+    const { t, i18n } = useTranslation('header');
+    const currentLanguage = i18n.language;
 
     return (
         <section className='bg-light-gray py-20'>
             <div className="container">
-                <h2 data-aos="fade-up" className='text-yellow text-center mb-5'>Оплата и доставка</h2>
+                <h2 data-aos="fade-up" className='text-yellow text-center mb-5'>{t('payment_and_delivery')}</h2>
                 <ul className='grid-4-list !gap-y-14'>
                     {data.map((i, index) => {
                         return (
@@ -31,7 +51,7 @@ const Delivery = () => {
                                 <div className='w-77 h-77 rounded-full flex items-center justify-center mx-auto bg-white absolute -top-1/2'>
                                     <img src={i.img} alt={i.title} />
                                 </div>
-                                <p className='text-sm font-bold text-center text-delivery'>{i.title}</p>
+                                <p className='text-sm font-bold text-center text-delivery'>{i.title[currentLanguage]}</p>
                             </li>
                         )
                     })}
