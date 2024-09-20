@@ -3,7 +3,7 @@ import { soups } from '../assets/supi/soups';
 import ProductCard from '../components/ProductCard';
 
 const Soups = () => {
-    const { t } = useTranslation('header');
+    const { t, } = useTranslation('header');
 
     return (
         <section>
