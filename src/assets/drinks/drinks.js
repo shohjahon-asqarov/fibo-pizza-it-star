@@ -19,7 +19,7 @@ const drinks = [
             en: "What an achievement! Order a Cyber Combo and get access to games from MY.GAMES, along with a coconut bar and 'Cyber' chocolate cookie from Bite. Also, automatically become a participant in the giveaway of game keys and large pizzas on June 29.",
             uz: "Mana qanday muvaffaqiyat! Kiber-kombo buyurtma qiling va MY.GAMES o‘yinlariga kirish huquqini oling, shuningdek, Bite kompaniyasining kokos batonchasi va «Cyber» shokoladli pechenesini qo‘lga kiriting. Shuningdek, 29-iyun kuni o‘yin kalitlari va katta pizzalar uchun avtomatik ravishda o‘yinda ishtirok etasiz."
         },
-        img: "s1",
+        img: s1,
         price: 120,
         count: 1,
         category: {
@@ -40,7 +40,7 @@ const drinks = [
             en: "What an achievement! Order a Cyber Combo and get access to games from MY.GAMES, along with a coconut bar and 'Cyber' chocolate cookie from Bite. Also, automatically become a participant in the giveaway of game keys and large pizzas on June 29.",
             uz: "Mana qanday muvaffaqiyat! Kiber-kombo buyurtma qiling va MY.GAMES o‘yinlariga kirish huquqini oling, shuningdek, Bite kompaniyasining kokos batonchasi va «Cyber» shokoladli pechenesini qo‘lga kiriting. Shuningdek, 29-iyun kuni o‘yin kalitlari va katta pizzalar uchun avtomatik ravishda o‘yinda ishtirok etasiz."
         },
-        img: "s2",
+        img: s2,
         price: 120,
         count: 1,
         category: {
@@ -61,7 +61,7 @@ const drinks = [
             en: "What an achievement! Order a Cyber Combo and get access to games from MY.GAMES, along with a coconut bar and 'Cyber' chocolate cookie from Bite. Also, automatically become a participant in the giveaway of game keys and large pizzas on June 29.",
             uz: "Mana qanday muvaffaqiyat! Kiber-kombo buyurtma qiling va MY.GAMES o‘yinlariga kirish huquqini oling, shuningdek, Bite kompaniyasining kokos batonchasi va «Cyber» shokoladli pechenesini qo‘lga kiriting. Shuningdek, 29-iyun kuni o‘yin kalitlari va katta pizzalar uchun avtomatik ravishda o‘yinda ishtirok etasiz."
         },
-        img: "s3",
+        img: s3,
         price: 120,
         count: 1,
         category: {
@@ -82,7 +82,7 @@ const drinks = [
             en: "What an achievement! Order a Cyber Combo and get access to games from MY.GAMES, along with a coconut bar and 'Cyber' chocolate cookie from Bite. Also, automatically become a participant in the giveaway of game keys and large pizzas on June 29.",
             uz: "Mana qanday muvaffaqiyat! Kiber-kombo buyurtma qiling va MY.GAMES o‘yinlariga kirish huquqini oling, shuningdek, Bite kompaniyasining kokos batonchasi va «Cyber» shokoladli pechenesini qo‘lga kiriting. Shuningdek, 29-iyun kuni o‘yin kalitlari va katta pizzalar uchun avtomatik ravishda o‘yinda ishtirok etasiz."
         },
-        img: "s4",
+        img: s4,
         price: 120,
         count: 1,
         category: {
@@ -103,7 +103,7 @@ const drinks = [
             en: "What an achievement! Order a Cyber Combo and get access to games from MY.GAMES, along with a coconut bar and 'Cyber' chocolate cookie from Bite. Also, automatically become a participant in the giveaway of game keys and large pizzas on June 29.",
             uz: "Mana qanday muvaffaqiyat! Kiber-kombo buyurtma qiling va MY.GAMES o‘yinlariga kirish huquqini oling, shuningdek, Bite kompaniyasining kokos batonchasi va «Cyber» shokoladli pechenesini qo‘lga kiriting. Shuningdek, 29-iyun kuni o‘yin kalitlari va katta pizzalar uchun avtomatik ravishda o‘yinda ishtirok etasiz."
         },
-        img: "s5",
+        img: s5,
         price: 120,
         count: 1,
         category: {
@@ -124,7 +124,7 @@ const drinks = [
             en: "What an achievement! Order a Cyber Combo and get access to games from MY.GAMES, along with a coconut bar and 'Cyber' chocolate cookie from Bite. Also, automatically become a participant in the giveaway of game keys and large pizzas on June 29.",
             uz: "Mana qanday muvaffaqiyat! Kiber-kombo buyurtma qiling va MY.GAMES o‘yinlariga kirish huquqini oling, shuningdek, Bite kompaniyasining kokos batonchasi va «Cyber» shokoladli pechenesini qo‘lga kiriting. Shuningdek, 29-iyun kuni o‘yin kalitlari va katta pizzalar uchun avtomatik ravishda o‘yinda ishtirok etasiz."
         },
-        img: "s6",
+        img: s6,
         price: 120,
         count: 1,
         category: {

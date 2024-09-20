@@ -43,76 +43,173 @@ const pizza_data = [
     {
         id: 1,
         img: pizza_img,
-        title: 'С креветками и трюфелями',
-        description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан.350 г',
+        title: {
+            ru: 'С креветками и трюфелями',
+            en: 'With shrimp and truffles',
+            uz: 'Krevetka va trufellar bilan'
+        },
+        description: {
+            ru: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350 г',
+            en: 'Homemade fettuccine pasta, creamy sauce, shrimp, truffle oil, black pepper, parmesan. 350 g',
+            uz: 'Uyda tayyorlangan fettuchine pasta, qaymoqli sous, krevetka, trufel yog‘i, qora murch, parmezan. 350 g'
+        },
         price: 350,
         count: 1,
-        category: 'Пицца'
+        category: {
+            ru: 'Пицца',
+            en: 'Pizza',
+            uz: 'Pizza'
+        }
     },
     {
         id: 2,
         img: pizza_img,
-        title: 'С креветками и трюфелями',
-        description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан.350 г',
+        title: {
+            ru: 'С креветками и трюфелями',
+            en: 'With shrimp and truffles',
+            uz: 'Krevetka va trufellar bilan'
+        },
+        description: {
+            ru: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350 г',
+            en: 'Homemade fettuccine pasta, creamy sauce, shrimp, truffle oil, black pepper, parmesan. 350 g',
+            uz: 'Uyda tayyorlangan fettuchine pasta, qaymoqli sous, krevetka, trufel yog‘i, qora murch, parmezan. 350 g'
+        },
         price: 350,
         count: 1,
-        category: 'Пицца'
+        category: {
+            ru: 'Пицца',
+            en: 'Pizza',
+            uz: 'Pizza'
+        }
     },
     {
         id: 3,
         img: pizza_img,
-        title: 'С креветками и трюфелями',
-        description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан.350 г',
+        title: {
+            ru: 'С креветками и трюфелями',
+            en: 'With shrimp and truffles',
+            uz: 'Krevetka va trufellar bilan'
+        },
+        description: {
+            ru: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350 г',
+            en: 'Homemade fettuccine pasta, creamy sauce, shrimp, truffle oil, black pepper, parmesan. 350 g',
+            uz: 'Uyda tayyorlangan fettuchine pasta, qaymoqli sous, krevetka, trufel yog‘i, qora murch, parmezan. 350 g'
+        },
         price: 350,
         count: 1,
-        category: 'Пицца'
+        category: {
+            ru: 'Пицца',
+            en: 'Pizza',
+            uz: 'Pizza'
+        }
     },
     {
         id: 4,
         img: pizza_img,
-        title: 'С креветками и трюфелями',
-        description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан.350 г',
+        title: {
+            ru: 'С креветками и трюфелями',
+            en: 'With shrimp and truffles',
+            uz: 'Krevetka va trufellar bilan'
+        },
+        description: {
+            ru: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350 г',
+            en: 'Homemade fettuccine pasta, creamy sauce, shrimp, truffle oil, black pepper, parmesan. 350 g',
+            uz: 'Uyda tayyorlangan fettuchine pasta, qaymoqli sous, krevetka, trufel yog‘i, qora murch, parmezan. 350 g'
+        },
         price: 350,
         count: 1,
-        category: 'Пицца'
+        category: {
+            ru: 'Пицца',
+            en: 'Pizza',
+            uz: 'Pizza'
+        }
     },
     {
         id: 5,
         img: pizza_img,
-        title: 'С креветками и трюфелями',
-        description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан.350 г',
+        title: {
+            ru: 'С креветками и трюфелями',
+            en: 'With shrimp and truffles',
+            uz: 'Krevetka va trufellar bilan'
+        },
+        description: {
+            ru: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350 г',
+            en: 'Homemade fettuccine pasta, creamy sauce, shrimp, truffle oil, black pepper, parmesan. 350 g',
+            uz: 'Uyda tayyorlangan fettuchine pasta, qaymoqli sous, krevetka, trufel yog‘i, qora murch, parmezan. 350 g'
+        },
         price: 350,
         count: 1,
-        category: 'Пицца'
+        category: {
+            ru: 'Пицца',
+            en: 'Pizza',
+            uz: 'Pizza'
+        }
     },
     {
         id: 6,
         img: pizza_img,
-        title: 'С креветками и трюфелями',
-        description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан.350 г',
+        title: {
+            ru: 'С креветками и трюфелями',
+            en: 'With shrimp and truffles',
+            uz: 'Krevetka va trufellar bilan'
+        },
+        description: {
+            ru: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350 г',
+            en: 'Homemade fettuccine pasta, creamy sauce, shrimp, truffle oil, black pepper, parmesan. 350 g',
+            uz: 'Uyda tayyorlangan fettuchine pasta, qaymoqli sous, krevetka, trufel yog‘i, qora murch, parmezan. 350 g'
+        },
         price: 350,
         count: 1,
-        category: 'Пицца'
+        category: {
+            ru: 'Пицца',
+            en: 'Pizza',
+            uz: 'Pizza'
+        }
     },
     {
         id: 7,
         img: pizza_img,
-        title: 'С креветками и трюфелями',
-        description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан.350 г',
+        title: {
+            ru: 'С креветками и трюфелями',
+            en: 'With shrimp and truffles',
+            uz: 'Krevetka va trufellar bilan'
+        },
+        description: {
+            ru: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350 г',
+            en: 'Homemade fettuccine pasta, creamy sauce, shrimp, truffle oil, black pepper, parmesan. 350 g',
+            uz: 'Uyda tayyorlangan fettuchine pasta, qaymoqli sous, krevetka, trufel yog‘i, qora murch, parmezan. 350 g'
+        },
         price: 350,
         count: 1,
-        category: 'Пицца'
+        category: {
+            ru: 'Пицца',
+            en: 'Pizza',
+            uz: 'Pizza'
+        }
     },
     {
         id: 8,
         img: pizza_img,
-        title: 'С креветками и трюфелями',
-        description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан.350 г',
+        title: {
+            ru: 'С креветками и трюфелями',
+            en: 'With shrimp and truffles',
+            uz: 'Krevetka va trufellar bilan'
+        },
+        description: {
+            ru: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350 г',
+            en: 'Homemade fettuccine pasta, creamy sauce, shrimp, truffle oil, black pepper, parmesan. 350 g',
+            uz: 'Uyda tayyorlangan fettuchine pasta, qaymoqli sous, krevetka, trufel yog‘i, qora murch, parmezan. 350 g'
+        },
         price: 350,
         count: 1,
-        category: 'Пицца'
+        category: {
+            ru: 'Пицца',
+            en: 'Pizza',
+            uz: 'Pizza'
+        }
     }
 ]
+
 
 export {
     logo,

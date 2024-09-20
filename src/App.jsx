@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useState } from 'react'
+import React, { Suspense, useEffect } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
 
 // components 
@@ -36,10 +36,14 @@ import StockDetail from './pages/StockDetail'
 // aos scroll animation
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useTranslation } from 'react-i18next'
 
 
 const App = () => {
   const dispatch = useDispatch();
+
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language;
 
   const { pathname } = useLocation();
 
@@ -51,7 +55,8 @@ const App = () => {
     AOS.init()
   }, [])
 
-  const modalProduct = useSelector((store) => store.modal.data)
+  const modalProduct = useSelector((store) => store.modal.data);
+
   const isModalOpen = useSelector((store) => store.modal.isOpen)
 
   const Home = () => {
@@ -91,7 +96,7 @@ const App = () => {
       <Footer />
       <ToastContainer />
 
-      <Modal footer={null} className='!w-[450px]' title={modalProduct.category} open={isModalOpen} onCancel={() => dispatch(closeModal())}>
+      <Modal footer={null} className='!w-[450px]' title={isModalOpen ? modalProduct.category[currentLanguage] : null} open={isModalOpen} onCancel={() => dispatch(closeModal())}>
         <ModalCard product={modalProduct} />
       </Modal>
     </>
