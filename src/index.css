@@ -17,6 +17,12 @@ html {
   @apply bg-yellow;
 }
 
+body {
+  background-color: #ffffff;
+}
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
