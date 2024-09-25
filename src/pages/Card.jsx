@@ -24,7 +24,7 @@ const Card = () => {
                                     <li className='py-8 border-t-2 border-light-gray' key={i.id}>
                                         <div className='flex justify-between items-center space-x-5'>
                                             <img src={i.img} alt={i.title[currentLanguage]} className='h-77 w-77 rounded-full' />
-                                            <div className='flex justify-between items-center'>
+                                            <div className='flex flex-grow justify-between items-center'>
                                                 <div className='w-3/5 space-y-1 hidden lg:inline-block'>
                                                     <h3 className='text-xl text-black'>{i.title[currentLanguage]}</h3>
                                                     <p className='text-sm font-medium text-gray'>{i.description[currentLanguage]}</p>

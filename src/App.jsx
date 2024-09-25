@@ -37,11 +37,13 @@ import StockDetail from './pages/StockDetail'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useTranslation } from 'react-i18next'
+import NotFound from './pages/NotFound'
 
 
 const App = () => {
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
+
 
 
   useEffect(() => {
@@ -98,6 +100,7 @@ const App = () => {
               <Route path='/contact' element={<Contact />} />
               <Route path='/card' element={<Card />} />
               <Route path='/favourite' element={<Favourite />} />
+              <Route path='*' element={<NotFound />} />
             </Routes>
           </Suspense>
         </main>
