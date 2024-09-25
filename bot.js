@@ -1,6 +1,6 @@
 import { Telegraf } from "telegraf"; 
 
-const TOKEN = "8114052817:AAGDBFfc9s80j2gosWWQWLuon1SiUUib6dc";
+const TOKEN = "8053237082:AAFNaMzsfyfV0JkNEpWUtJHgGycnvXCXl3o";
 const bot = new Telegraf(TOKEN);
 
 const web_link = "https://it-start-pizza.netlify.app/";
@@ -8,7 +8,7 @@ const web_link = "https://it-start-pizza.netlify.app/";
 bot.start((ctx) => 
   ctx.reply("Assalomu Alaykum , It-Start tomonidan yaratilgan botga xush kelipsiz", {
     reply_markup: {
-      keyboard: [[{ text: "Fibo Pizza", web_app: { url: web_link } }]],
+      inline_keyboard: [[{ text: "Open App", web_app: { url: web_link } }]],
     },
   })
 );
