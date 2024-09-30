@@ -14,12 +14,26 @@
     <title>Fibo Pizza | Itech academy</title>
     <link rel="icon" type="img/png" href="./public/icon.png" />
 
-      <!-- Form telegram web app -->
-      <script src="https://telegram.org/js/telegram-web-app.js"></script>
-
+    <!-- Form telegram web app -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <script>
+      (function (d, w, c) {
+        w.ChatraID = "CAGFZkBgphd4gLNMp";
+        var s = d.createElement("script");
+        w[c] =
+          w[c] ||
+          function () {
+            (w[c].q = w[c].q || []).push(arguments);
+          };
+        s.async = true;
+        s.src = "https://call.chatra.io/chatra.js";
+        if (d.head) d.head.appendChild(s);
+      })(document, window, "Chatra");
+    </script>
   </body>
 </html>
