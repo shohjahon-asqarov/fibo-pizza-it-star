@@ -47,8 +47,8 @@ const Delivery = () => {
                 <ul className='grid-4-list !gap-y-14'>
                     {data.map((i, index) => {
                         return (
-                            <li className='bg-white rounded-14 px-5 pb-5 relative pt-9 flex justify-center ' key={index}>
-                                <div className='w-77 h-77 rounded-full flex items-center justify-center mx-auto bg-white absolute -top-1/2'>
+                            <li data-aos="fade-up" className='bg-white rounded-14 px-5 pb-5 relative pt-9 flex justify-center ' key={index}>
+                                <div className='w-77 h-77 rounded-full flex items-center justify-center mx-auto bg-white absolute -top-1/3'>
                                     <img src={i.img} alt={i.title} />
                                 </div>
                                 <p className='text-sm font-bold text-center text-delivery'>{i.title[currentLanguage]}</p>

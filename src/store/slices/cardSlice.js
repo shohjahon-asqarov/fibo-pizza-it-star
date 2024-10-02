@@ -93,6 +93,12 @@ export const cardSlice = createSlice({
     },
 })
 
+export const getTotalPrice = (state) => {
+    return state.card.data.reduce((total, product) => {
+        return total + (product.count * product.price);
+    }, 0);
+};
+
 export const { addCard, deleteCard, updateCount, minusCount } = cardSlice.actions
 
 export default cardSlice.reducer

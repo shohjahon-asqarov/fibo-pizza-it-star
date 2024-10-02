@@ -83,11 +83,11 @@ const Footer = () => {
                             </a>
                         </li>
                         <li className='social-btn col-span-6 md:col-span-2'>
-                            <a href="#" >{t('contact_us')}</a>
+                            <a target='_blank' href="https://t.me/fibo_web_app_bot" >{t('contact_us')}</a>
                         </li>
                     </ul>
                     <div className='space-y-3 hidden md:block'>
-                        <a className='text-26 font-bold text-yellow block ' href="tel:+998939170731">998 93-917-07-31</a>
+                        <a className='text-26 font-bold text-yellow block' href="tel:+998939170731">998 93-917-07-31</a>
                         <button className='light-btn'>{t('request_call')}</button>
                     </div>
                     <div className='flex md:hidden justify-between items-center '>
