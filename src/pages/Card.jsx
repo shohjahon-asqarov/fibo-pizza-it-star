@@ -40,6 +40,7 @@ const Card = () => {
 
     const writePromocode = (e) => {
         setFinding(true)
+
         let found = promocodes.find(i => i.code == e.target.value);
         if (found) {
             setAvailable(true)
@@ -48,12 +49,17 @@ const Card = () => {
         }
         else {
             setAvailable(false);
-            inputRef.current.style.borderColor = 'rgb(255 , 0 , 0)';
+            if (e.target.value == '') {
+                inputRef.current.style.borderColor = '#f3f3f7';
+            } else {
+                inputRef.current.style.borderColor = 'rgb(255 , 0 , 0)';
+            }
         }
         setTimeout(() => {
             setFinding(false)
         }, 500)
     }
+
 
     return (
         <section>
