@@ -7,7 +7,7 @@ const Stock = () => {
     return (
         <section>
             <div className="container py-20">
-                <h2 data-aos="fade-up" className='text-black text-44 text-center'>{t('our')} <span className='text-yellow lowercase'>{t('promotions')}</span></h2>
+                <h2 data-aos="fade-up" className='text-black text-center'>{t('our')} <span className='text-yellow lowercase'>{t('promotions')}</span></h2>
 
                 <div className='grid md:grid-cols-2 gap-3 md:gap-8 py-10'>
                     <img className='w-full h-full rounded-20' src={stock_img} alt="stock" />

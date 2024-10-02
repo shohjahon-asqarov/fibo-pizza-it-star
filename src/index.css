@@ -7,6 +7,10 @@ html {
   @apply text-black;
 }
 
+body {
+  @apply bg-white ;
+}
+
 ::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 10px;

@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
 
 // components 
@@ -37,10 +37,18 @@ import StockDetail from './pages/StockDetail'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useTranslation } from 'react-i18next'
+import NotFound from './pages/NotFound'
 
 
 const App = () => {
   const dispatch = useDispatch();
+  const [loading, setLoading] = useState(true);
+
+
+
+  useEffect(() => {
+    setLoading(false)
+  }, [])
 
   const { i18n } = useTranslation();
   const currentLanguage = i18n.language;
@@ -72,34 +80,38 @@ const App = () => {
   }
 
   return (
-    <>
-      <Navbar />
+    loading ?
+      <Loader />
+      :
+      <>
+        <Navbar />
 
-      <main>
-        <Suspense fallback={<Loader />}>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/stock' element={<StockPage />} />
-            <Route path='/stock/:id' element={<StockDetail />} />
-            <Route path='/pizza' element={<Pizza />} />
-            <Route path='/drink' element={<Drink />} />
-            <Route path='/paste' element={<Paste />} />
-            <Route path='/salad' element={<Salads />} />
-            <Route path='/soups' element={<Soups />} />
-            <Route path='/contact' element={<Contact />} />
-            <Route path='/card' element={<Card />} />
-            <Route path='/favourite' element={<Favourite />} />
-          </Routes>
-        </Suspense>
-      </main>
+        <main>
+          <Suspense fallback={<Loader />}>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/stock' element={<StockPage />} />
+              <Route path='/stock/:id' element={<StockDetail />} />
+              <Route path='/pizza' element={<Pizza />} />
+              <Route path='/drink' element={<Drink />} />
+              <Route path='/paste' element={<Paste />} />
+              <Route path='/salad' element={<Salads />} />
+              <Route path='/soups' element={<Soups />} />
+              <Route path='/contact' element={<Contact />} />
+              <Route path='/card' element={<Card />} />
+              <Route path='/favourite' element={<Favourite />} />
+              <Route path='*' element={<NotFound />} />
+            </Routes>
+          </Suspense>
+        </main>
 
-      <Footer />
-      <ToastContainer />
+        <Footer />
+        <ToastContainer />
 
-      <Modal footer={null} className='!w-[450px]' title={isModalOpen ? modalProduct.category[currentLanguage] : null} open={isModalOpen} onCancel={() => dispatch(closeModal())}>
-        <ModalCard product={modalProduct} />
-      </Modal>
-    </>
+        <Modal footer={null} className='!w-[450px]' title={isModalOpen ? modalProduct.category[currentLanguage] : null} open={isModalOpen} onCancel={() => dispatch(closeModal())}>
+          <ModalCard product={modalProduct} />
+        </Modal>
+      </>
   )
 }
 

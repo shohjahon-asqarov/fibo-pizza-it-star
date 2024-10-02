@@ -68,7 +68,7 @@ const Footer = () => {
                             </a>
                         </li>
                         <li className='social-btn'>
-                            <a href="#">
+                            <a target='_blank' href="https://t.me/fibo_web_app_bot">
                                 <img src={tgIcon} alt="icon" />
                             </a>
                         </li>
