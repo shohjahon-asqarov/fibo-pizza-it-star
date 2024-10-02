@@ -2,11 +2,12 @@ import { closeIcon, emptyIcon, minusIcon, plusIcon } from '../assets/data'
 import { useDispatch, useSelector } from 'react-redux'
 import { deleteCard, getTotalPrice, minusCount, updateCount } from '../store/slices/cardSlice';
 import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 const Card = () => {
 
     const cartData = useSelector((store) => store.card.data);
+    const inputRef = useRef(null);
 
     const promocodes = [
         {
@@ -42,10 +43,12 @@ const Card = () => {
         let found = promocodes.find(i => i.code == e.target.value);
         if (found) {
             setAvailable(true)
-            setDiscountPrice(discountPrice => discountPrice = (totalPrice - (found.discount * totalPrice)))
+            setDiscountPrice(discountPrice => discountPrice = (totalPrice - (found.discount * totalPrice)));
+            inputRef.current.style.borderColor = 'rgb(0 , 255 , 0)';
         }
         else {
-            setAvailable(false)
+            setAvailable(false);
+            inputRef.current.style.borderColor = 'rgb(255 , 0 , 0)';
         }
         setTimeout(() => {
             setFinding(false)
@@ -99,7 +102,7 @@ const Card = () => {
                                 })}
                             </ul>
                             <div className='border-y border-light-gray py-8 px-5 flex items-end justify-center flex-col space-y-3'>
-                                <div className='flex items-center border border-light-gray py-2.5 pr-5 rounded-14'>
+                                <div ref={inputRef} className='flex items-center border border-light-gray py-2.5 pr-5 rounded-14'>
                                     <input onKeyUp={(e) => writePromocode(e)} className='border-none outline-none' type="text" placeholder='Promocode' />
                                     <div className={`${finding ? 'opacity-100' : 'opacity-0'}`} role="status">
                                         <svg aria-hidden="true" class="w-8 h-8 animate-spin fill-blue-600" viewBox="0 0 100 101" fill="transparent" xmlns="http://www.w3.org/2000/svg">
